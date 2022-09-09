@@ -1,0 +1,57 @@
+/* <div class="loadingio-spinner-logo"><div class="animated-div">
+    <div></div><div></div><div></div><div></div>
+</div></div> */
+
+@keyframes animated-div {
+    0% { transform: scale(1.1500000000000001) }
+    100% { transform: scale(1) }
+  }
+  .animated-div div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 33px;
+    left: 23px;
+    background-image: url("./blue.png");
+    background-repeat: no-repeat;
+    background-size: 80px;
+    animation: animated-div 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: -0.3s;
+  }
+  .animated-div div:nth-child(2) {
+    top: 3px;
+    left: 57px;
+    background-image: url("./yellow.png");
+    animation-delay: -0.2s;
+  }
+  .animated-div div:nth-child(3) {
+    top: 66px;
+    left: 52px;
+    background-image: url("./red.png");
+    animation-delay: 0s;
+  }
+  .animated-div div:nth-child(4) {
+    top: 37px;
+     left: 86px;
+    background-image: url("./green.png");
+    animation-delay: -0.1s;
+  }
+  .loadingio-spinner-logo {
+    width: 190px;
+    height: 150px;
+    display: inline-block;
+    overflow: hidden;
+    background-image: url("./circle.png");
+    background-position: top 8px left 28px;
+    background-repeat: no-repeat;
+    background-size: 133px;
+  }
+  .animated-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+  }
+  .animated-div div { box-sizing: content-box; }
